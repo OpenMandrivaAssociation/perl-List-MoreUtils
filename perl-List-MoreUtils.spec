@@ -12,6 +12,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source:		http://www.cpan.org/modules/by-module/List/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 List::MoreUtils provides some trivial but commonly needed functionality on
