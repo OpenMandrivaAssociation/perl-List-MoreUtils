@@ -1,5 +1,5 @@
 %define upstream_name	 List-MoreUtils
-%define upstream_version 0.24
+%define upstream_version 0.25
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -10,8 +10,9 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_version}.tar.gz
-
 Buildrequires:	perl-devel
+BuildRequires:	perl-Test-Pod
+BuildRequires:	perl-Test-Pod-Coverage
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
@@ -23,7 +24,7 @@ the functions from this module however should give slightly better performance
 as everything is implemented in C.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{upstream_version}_02
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
