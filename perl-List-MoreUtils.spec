@@ -3,16 +3,18 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 1
+Release:	%mkrel 2
 
 Summary:	Provide the stuff missing in List::Util 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildRequires:	perl(Test::Pod)
+BuildRequires:	perl(Test::Pod::Coverage)
 Buildrequires:	perl-devel
-BuildRequires:	perl-Test-Pod
-BuildRequires:	perl-Test-Pod-Coverage
+
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
@@ -35,7 +37,7 @@ rm -rf %{buildroot}
 %makeinstall_std
 
 %check
-%__make test
+%make test
 
 %clean 
 rm -rf %{buildroot}
@@ -46,4 +48,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/List
 %{perl_vendorarch}/auto/List
 %{_mandir}/*/*
-
