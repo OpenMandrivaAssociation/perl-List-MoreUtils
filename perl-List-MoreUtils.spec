@@ -1,9 +1,9 @@
 %define upstream_name	 List-MoreUtils
-%define upstream_version 0.25
+%define upstream_version 0.26
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 5
+Release:	%mkrel 1
 
 Summary:	Provide the stuff missing in List::Util 
 License:	GPL+ or Artistic
@@ -26,7 +26,7 @@ the functions from this module however should give slightly better performance
 as everything is implemented in C.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}_02
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
