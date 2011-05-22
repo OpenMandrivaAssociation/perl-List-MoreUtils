@@ -1,9 +1,9 @@
 %define upstream_name	 List-MoreUtils
-%define upstream_version 0.30
+%define upstream_version 0.32
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 2
+Release:	%mkrel 1
 
 Summary:	Provide the stuff missing in List::Util 
 License:	GPL+ or Artistic
