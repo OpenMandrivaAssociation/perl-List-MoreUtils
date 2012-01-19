@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_
 
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
-Buildrequires:	perl-devel
+Buildrequires:	perl-devel >= 5.14
 
 %description
 List::MoreUtils provides some trivial but commonly needed functionality on
