@@ -1,9 +1,12 @@
 %define upstream_name	 List-MoreUtils
 %define upstream_version 0.32
+# Fix circular build dependency:
+# gprintify requires perl-List-MoreUtils
+%define dont_gprintify 1
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 1
+Release:	2
 
 Summary:	Provide the stuff missing in List::Util 
 License:	GPL+ or Artistic
@@ -14,8 +17,6 @@ Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 Buildrequires:	perl-devel
-
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 List::MoreUtils provides some trivial but commonly needed functionality on
