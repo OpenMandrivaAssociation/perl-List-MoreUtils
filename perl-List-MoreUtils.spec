@@ -6,7 +6,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Provide the stuff missing in List::Util 
 License:	GPL+ or Artistic
@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_
 
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
-Buildrequires:	perl-devel >= 5.14
+BuildRequires:	perl-devel >= 2:5.14.2-1
 
 %description
 List::MoreUtils provides some trivial but commonly needed functionality on
