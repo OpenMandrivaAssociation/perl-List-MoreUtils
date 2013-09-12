@@ -1,18 +1,17 @@
-%define upstream_name	 List-MoreUtils
-%define upstream_version 0.33
+%define modname	List-MoreUtils
+%define modver	0.33
 # Fix circular build dependency:
 # gprintify requires perl-List-MoreUtils
 %define dont_gprintify 1
 
 Summary:	Provide the stuff missing in List::Util 
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Name:		perl-%{modname}
+Version:	%perl_convert_version %{modver}
 Release:	2
-License:	GPL+ or Artistic
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/List/%{upstream_name}-%{upstream_version}.tar.gz
-
+Url:		http://search.cpan.org/dist/%{modname}/
+Source0:	http://www.cpan.org/modules/by-module/List/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel >= 2:5.14.2-1
@@ -26,10 +25,10 @@ the functions from this module however should give slightly better performance
 as everything is implemented in C.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -qn %{modname}-%{modver}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%__perl Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
 
 %install
@@ -42,5 +41,5 @@ as everything is implemented in C.
 %doc Changes README
 %{perl_vendorarch}/List
 %{perl_vendorarch}/auto/List
-%{_mandir}/*/*
+%{_mandir}/man3/*
 
