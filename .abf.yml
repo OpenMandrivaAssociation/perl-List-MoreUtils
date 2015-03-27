@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   List-MoreUtils-0.33.tar.gz: 9297076d45279468f4779be80304fa89de03a4ed
+sources:
+  List-MoreUtils-0.408.tar.gz: dbb06b8fdc9258988953eeacea32fc2c2b9e1a66
