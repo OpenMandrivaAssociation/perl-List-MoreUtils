@@ -15,6 +15,7 @@ Source0:	http://www.cpan.org/modules/by-module/List/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel >= 2:5.14.2-1
+BuildRequires:	perl(Exporter::Tiny)
 
 %description
 List::MoreUtils provides some trivial but commonly needed functionality on
