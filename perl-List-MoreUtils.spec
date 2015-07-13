@@ -39,7 +39,7 @@ as everything is implemented in C.
 %make test
 
 %files 
-%doc Changes README
+%doc Changes
 %{perl_vendorarch}/List
 %{perl_vendorarch}/auto/List
 %{_mandir}/man3/*
