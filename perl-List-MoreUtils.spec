@@ -1,5 +1,5 @@
-%define modname	List-MoreUtils
-%define modver	0.413
+%define modname List-MoreUtils
+%define modver 0.416
 # Fix circular build dependency:
 # gprintify requires perl-List-MoreUtils
 %define dont_gprintify 1
@@ -7,7 +7,7 @@
 Summary:	Provide the stuff missing in List::Util 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
@@ -38,9 +38,8 @@ as everything is implemented in C.
 %check
 %make test
 
-%files 
+%files
 %doc Changes
 %{perl_vendorarch}/List
 %{perl_vendorarch}/auto/List
 %{_mandir}/man3/*
-
