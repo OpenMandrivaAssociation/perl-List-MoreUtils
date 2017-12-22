@@ -1,5 +1,5 @@
 %define modname List-MoreUtils
-%define modver 0.426
+%define modver 0.428
 # Fix circular build dependency:
 # gprintify requires perl-List-MoreUtils
 %define dont_gprintify 1
