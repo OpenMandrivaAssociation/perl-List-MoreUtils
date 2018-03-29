@@ -33,13 +33,16 @@ as everything is implemented in C.
 %make CFLAGS="%{optflags}"
 
 %install
-%makeinstall_std
+%make_install
+find %{buildroot} -name perllocal.pod -o -name .packlist |xargs rm -f
 
 %check
-%make test
+# Make test seems to work only with a
+# previously installed version of perl-List-MoreUtils
+#make test
 
 %files
 %doc Changes
-%{perl_vendorarch}/List
+%{perl_vendorlib}/List
 %{perl_vendorarch}/auto/List
 %{_mandir}/man3/*
