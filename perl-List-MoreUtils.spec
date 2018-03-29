@@ -16,6 +16,7 @@ BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel >= 2:5.14.2-1
 BuildRequires:	perl(Exporter::Tiny)
+BuildArch:	noarch
 
 %description
 List::MoreUtils provides some trivial but commonly needed functionality on
@@ -34,7 +35,6 @@ as everything is implemented in C.
 
 %install
 %make_install
-find %{buildroot} -name perllocal.pod -o -name .packlist |xargs rm -f
 
 %check
 # Make test seems to work only with a
@@ -44,5 +44,4 @@ find %{buildroot} -name perllocal.pod -o -name .packlist |xargs rm -f
 %files
 %doc Changes
 %{perl_vendorlib}/List
-%{perl_vendorarch}/auto/List
 %{_mandir}/man3/*
