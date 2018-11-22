@@ -7,10 +7,10 @@
 Summary:	Provide the stuff missing in List::Util 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}/
+Url:		http://metacpan.org/pod/List::MoreUtils
 Source0:	http://www.cpan.org/modules/by-module/List/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
