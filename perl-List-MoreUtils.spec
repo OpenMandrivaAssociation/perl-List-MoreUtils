@@ -1,5 +1,5 @@
 %define modname List-MoreUtils
-%define modver 0.428
+%define modver 0.430
 # Fix circular build dependency:
 # gprintify requires perl-List-MoreUtils
 %define dont_gprintify 1
@@ -7,7 +7,7 @@
 Summary:	Provide the stuff missing in List::Util 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	5
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/List::MoreUtils
