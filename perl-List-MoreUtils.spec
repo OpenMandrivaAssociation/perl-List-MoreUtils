@@ -12,6 +12,7 @@ License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/List::MoreUtils
 Source0:	http://www.cpan.org/modules/by-module/List/%{modname}-%{modver}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel >= 2:5.14.2-1
